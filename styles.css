@@ -1,0 +1,179 @@
+:root {
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-fundo: #00030C;
+    --font-principal: 'Inter';
+    --botao-azul-efeito: #3c92fa;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    font-family: var(--font-principal);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--branco-principal);
+}
+
+.container__titulo {
+    color: var(--branco-principal);
+    font-weight: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.principal {
+    /* adicionar imagens que não são extremamentes importantes */
+    background-image: url(assets/Background.png);
+    /* para não ficar repetindo a imagem de fundo como um espelho */
+    background-repeat: no-repeat;
+    /* faz com que a imagem ocupe todo o container e preencher ele  */
+    background-size: contain;
+    /* como o display esta com grid ele vai alinhar no centro do grid*/
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    height: 100vh;
+    /* usaria para separar mini telas */
+    display: grid;
+    /* coloca esse grid em colunas e cada parte dividida em 50% da tela */
+    grid-template-columns: 50% 50%;
+}
+
+.container__botao {
+    background-color: var(--botao-azul);
+    border-radius: 5px;
+    padding: 1em;
+    color: var(--branco-principal);
+    /* para que o design do botao ocupe 100% do bloco*/
+    display: block;
+    text-decoration: none;
+    margin-bottom: 1em;
+
+}
+
+.botao_secundario {
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+}
+
+.container__aviso {
+    font-size: 12px;
+    color: var(--cinza-secundario);
+}
+
+.container__imagem {
+    margin: 1em 0 2em 0;
+}
+
+.container__caixa {
+    margin: 0 6em;
+}
+
+.secundario__imagem {
+    width: 80%;
+}
+
+.secundario {
+    align-items: center;
+    margin: 0 10em;
+}
+
+.descricao__titulo {
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto {
+    color: var(--cinza-secundario);
+}
+
+.secundario__botao {
+    /* o espaço do botao fica de acordo com o tamanho do texto em linha*/
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.container__descricao {
+    padding: 2em;
+}
+
+.dispositivos__lista {
+    display: flex;
+    justify-content: center;
+    /* retira os pontinhos da lista que vem por padrão*/
+    list-style-type: none;
+    margin: 5em 0;
+}
+
+.dispositivos {
+    text-align: center;
+}
+
+.dispositivos__titulo {
+    font-size: 49px;
+    color: var(--branco-principal);
+}
+
+.lista__item {
+    font-size: 32px;
+    color: var(--branco-principal);
+}
+
+.rodape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--cinza-secundario);
+    gap: 23px;
+    margin: 5em 3em;
+    font-family: var(--font-principal);
+    font-weight: 400;
+}
+
+.rodape__lista {
+    display: flex;
+    gap: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--branco-principal);
+}
+
+.lista__link {
+    list-style-type: none;
+}
+
+.lista__link a:hover {
+    color: var(--botao-azul);
+}
+
+/* o ato de clicar no botao vai deixar ele rosa */
+.lista__link a:active {
+    color: purple;
+}
+
+.rodape__texto {
+    color: var(--cinza-secundario);
+    text-align: center;
+    font-size: 14px;
+}
+
+.rodape__logo {
+    margin-top: 5em;
+    margin-bottom: 2em;
+}
+/* quando passao mouse em cima do botao faz as configs abaixo */
+.container__botao:hover {
+    color: var(--botao-azul-efeito);
+    color: var(--cor-fundo);
+}
